@@ -15,9 +15,35 @@
     }
     html, body{
       height: 100%;
+      font-size: 16px;
     }
-    li {
-      list-style: none;
+    a {
+      text-decoration: none;
+      color: #555;
+      transition: 0.3s ease;
+    }
+    a:hover {
+      color: #CC00CC;
+    }
+    header {
+      text-align: center;
+      background: rgba(204, 204, 204, 0.8);
+      padding: 50px 0;
+    }
+    header h1 {
+      font-family: "Vollkorn", serif;
+      font-size: 3em;
+    }
+    header h2 {
+      font-family: "Open Sans", sans-serif;
+      font-style: italic;
+      font-size: 1.5em;
+      padding: 0 20px;
+    }
+    .resume-image {
+      border-radius: 50%;
+      max-width: 150px;
+      margin-bottom: 30px;
     }
     body{
       display: flex;
@@ -29,9 +55,6 @@
       justify-content: center;
       align-items: center;
     }
-    section{
-      display: flex;
-    }
     aside{
       flex: 0.4;
     }
@@ -42,17 +65,183 @@
       width: 100px;
       height: 100px;
     }
+    .position-title {
+      font-size: 1.25em;
+      font-family: "Vollkorn", serif;
+      margin: 10px 0 5px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .contact-info {
+      font-family: "Open Sans", sans-serif;
+      margin-top: 20px;
+    }
+    .phone-number, .email-address {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .icon{
+      margin: 0 5px
+    }
+    section {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+      font-family: "Open Sans", sans-serif;
+      box-sizing: border-box;
+    }
+    section:first-of-type {
+      margin-top: 30px;
+    }
+    section h1 {
+      font-size: 2rem;
+      padding-bottom: 5px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      margin-bottom: 20px;
+      font-family: "Vollkorn", serif;
+      color: #333;
+    }
+    @media (max-width: 900px) {
+      section h1 {
+        text-align: center;
+      }
+    }
+    section h2 {
+      font-size: 1.5rem;
+      font-family: "Vollkorn", serif;
+      color: #444;
+      display: inline-block;
+    }
+    @media (max-width: 900px) {
+      section h2 {
+        text-align: center;
+        display: block;
+      }
+    }
+
+    .education-section-heading {
+      margin-right: 10px;
+    }
+
+    .address-container {
+      display: inline-block;
+    }
+
+    .school-name-location-date-container {
+      display: inline-block;
+    }
+    @media (max-width: 900px) {
+      .school-name-location-date-container {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .languages-list,
+      .tools-list {
+        flex-wrap: wrap;
+      }
+    }
+    .languages-list > li,
+    .tools-list > li {
+      flex-grow: 1;
+    }
+    @media (max-width: 900px) {
+      .languages-list > li,
+      .tools-list > li {
+        width: 45%;
+        margin-bottom: 20px;
+      }
+    }
+
+    .secondary-languages-list,
+    .secondary-tools-list {
+      color: #555;
+    }
+    .secondary-languages-list li,
+    .secondary-tools-list li {
+      margin-left: 10px;
+    }
+    @media (max-width: 900px) {
+      .secondary-languages-list li,
+      .secondary-tools-list li {
+        margin-left: 0;
+        text-align: center;
+      }
+    }
+
+    .work-experience-list li {
+      width: 100%;
+      padding: 0 10px;
+      margin-bottom: 30px;
+    }
+
+    .secondary-work-experience-list > li {
+      padding: 5px 0;
+      margin-left: 10px;
+    }
+
+    .tertiary-work-experience-list {
+      list-style: square;
+      margin-left: 15px;
+    }
+    .tertiary-work-experience-list > li {
+      margin: 0 0 5px 10px;
+    }
+
+    .organization-name {
+      display: inline-block;
+    }
+
+    .organization-link:hover {
+      color: #888;
+      text-shadow: none;
+    }
+
+    .camps-conferences-container {
+      margin-bottom: 15px;
+    }
+    .camps-conferences-container p {
+      margin-left: 5px;
+    }
+    @media (max-width: 900px) {
+      .camps-conferences-container p {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .camp-dates {
+        display: block;
+        text-align: center;
+      }
+    }
+
   </style>
 </head>
 
 <body>
     <header>
-      <img src=""/>
-      <h1>NGUYEN CHI QUYET</h1>
-      <h1>JAVASCRIPT LOVER</h1>
+      <img class="resume-image" src="./assets/avatar.jpeg"/>
+      <h1>Nguyen Chi Quyet</h1>
+      <h2>javascript lover</h2>
+      <address class="contact-info">
+        <a href="" itemprop="telephone" target="_blank" class="phone-number">0909620992</a>
+        <a href="mailto:chiquyet199@gmail.com" itemprop="email" target="_blank" class="email-address">chiquyet199@gmail.com</a>
+        <a href="https://github.com/chiquyet199" itemprop="url" target="_blank" class="icon">
+          <i class="fab fa-github fa-lg"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/cqpro/" itemprop="url" target="_blank" class="icon">
+          <i class="fab fa-linkedin fa-lg"></i>
+        </a>
+        <a href="https://codepen.io/cqpro/" itemprop="url" target="_blank" class="icon">
+          <i class="fab fa-codepen fa-lg"></i>
+        </a>
+      </address>
     </header>
-    <section>
-      <aside>
+      <!-- <aside>
         <div>
           <h3>Info:</h3>
           <ul>
@@ -88,30 +277,33 @@
           <img class="logo selenium" alt="logo-selenium" src="./assets/selenium.png"/>
           <img class="logo webpack" alt="logo-webpack" src="./assets/webpack.svg"/>
         </div>
-      </aside>
+      </aside> -->
       <main>
-        <div class="projects">
-          <h2>Projects</h2>
-          <ul>
-            <li>Singapore Airline</li>
-            <li>Casewhere</li>
-            <li>Heartbeat</li>
-            <li>Muang Thai Life Insurance (MTL)</li>
-            <li>Lingio</li>
+        <section class="experience-section" ng-controller="organizationCtrl">
+          <h1>Professional Work Experience</h1>
+          <ul class="work-experience-list">
+            <!-- ngRepeat: organization in organizations -->
+            <li>
+              <div class="organization-heading">
+                <a href="https://wearefram.com" title="fram^">
+                  <h2 itemprop="name" class="organization-name">fram^</h2>
+                </a>
+              </div>
+              <span class="organization-dates">August 2018 - Present</span>
+              <div>
+                <h3 class="position-title">Front End Developer</h3>
+                <ul class="tertiary-work-experience-list">
+                  <li>Working on a language platform named http://lingio.co/ aim to help immigrants learn Swedish</li>
+                  <li>Use HTML, Stylus, JavaScript and ReactJS to enhance the design and user experience</li>
+                  <li>Collaborate with team members on UI/UX ideas for existing and new products</li>
+                  <li>Version control with Git</li>
+                </ul>
+              </div>
+              <!-- end ngRepeat: position in organization.positions -->
+            </li>
           </ul>
-        </div>
-        <div class="archivement">
-          <ul>
-            <li>Applied successful Micro-frontend</li>
-            <li>Built my own react-boilerplate</li>
-            <li>Built online course spa-js in vanilla</li>
-            <li>Talent at Pangara</li>
-            <li>Toeic of 670</li>
-            <li>Complete canvas game by my self</li>
-          </ul>
-        </div>
+        </section>
       </main>
-    </section>
 </body>
 
 </html>
