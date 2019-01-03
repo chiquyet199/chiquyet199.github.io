@@ -45,25 +45,17 @@
       max-width: 150px;
       margin-bottom: 30px;
     }
-    body{
-      display: flex;
-      flex-direction: column;
-    }
-    header{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    aside{
-      flex: 0.4;
-    }
-    main{
-      flex: 0.6
-    }
     .logo{
       width: 100px;
       height: 100px;
+    }
+    .logo.webpack, .logo.angularjs{
+      width: 200px
+    }
+    .logo-container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly
     }
     .position-title {
       font-size: 1.25em;
@@ -263,44 +255,118 @@
             </li>
           </ul>
         </div>
-        <div>
-          <h3>Tools & Tech stacks</h3>
-          <img class="logo es6" alt="logo-es6" src="./assets/es6.svg"/>
-          <img class="logo css3" alt="logo-css3" src="./assets/css3.svg"/>
-          <img class="logo html5" alt="logo-html5" src="./assets/html5.svg"/>
-          <img class="logo git" alt="logo-git" src="./assets/git.svg"/>
-          <img class="logo react" alt="logo-react" src="./assets/react.svg"/>
-          <img class="logo vue" alt="logo-vue" src="./assets/vue.svg"/>
-          <img class="logo vscode" alt="logo-vscode" src="./assets/visual-code.svg"/>
-          <img class="logo angularjs" alt="logo-angularjs" src="./assets/angularjs.svg"/>
-          <img class="logo cbt" alt="logo-cbt" src="./assets/cbt.png"/>
-          <img class="logo selenium" alt="logo-selenium" src="./assets/selenium.png"/>
-          <img class="logo webpack" alt="logo-webpack" src="./assets/webpack.svg"/>
-        </div>
+        
       </aside> -->
       <main>
-        <section class="experience-section" ng-controller="organizationCtrl">
+        <section class="experience-section">
+          <h1>Career Objective</h1>
+          <ul class="work-experience-list">
+            <li>
+               Having more than 5 years of working with JS and it's frameworks and contribute to successful of many products like Singapore
+              Airline website using Jquery, Muang Thai Insuarance app & webapp using React and React Native, Heartbeat chrome extension
+              using vanilla JS, Lingio web-app and it's related management app using React, VueJS, Selenium, NodeJs and some
+              other internal projects using AngularJS, ExtJS, Canvas, SVG... . Im eager to have new challenge and I believe that I'm your best fit.
+            </li>
+          </ul>
+        </section>
+        <section class="experience-section">
+          <h1>Tech stacks</h1>
+          <div class="logo-container">
+            <img class="logo es6" alt="logo-es6" src="./assets/es6.svg" />
+            <img class="logo css3" alt="logo-css3" src="./assets/css3.svg" />
+            <img class="logo html5" alt="logo-html5" src="./assets/html5.svg" />
+            <img class="logo git" alt="logo-git" src="./assets/git.svg" />
+            <img class="logo react" alt="logo-react" src="./assets/react.svg" />
+            <img class="logo vue" alt="logo-vue" src="./assets/vue.svg" />
+          </div>
+          <div class="logo-container">
+            <img class="logo vscode" alt="logo-vscode" src="./assets/visual-code.svg" />
+            <img class="logo angularjs" alt="logo-angularjs" src="./assets/angularjs.svg" />
+            <img class="logo cbt" alt="logo-cbt" src="./assets/cbt.png" />
+            <img class="logo selenium" alt="logo-selenium" src="./assets/selenium.png" />
+            <img class="logo webpack" alt="logo-webpack" src="./assets/webpack.svg" />
+          </div>
+        </section>
+        <section class="experience-section">
           <h1>Professional Work Experience</h1>
           <ul class="work-experience-list">
-            <!-- ngRepeat: organization in organizations -->
             <li>
               <div class="organization-heading">
                 <a href="https://wearefram.com" title="fram^">
                   <h2 itemprop="name" class="organization-name">fram^</h2>
                 </a>
               </div>
-              <span class="organization-dates">August 2018 - Present</span>
+              <span class="organization-dates">Aug 2018 - Present</span>
               <div>
-                <h3 class="position-title">Front End Developer</h3>
+                <h3 class="position-title">Principal JavaScript Developer</h3>
                 <ul class="tertiary-work-experience-list">
-                  <li>Working on a language platform named http://lingio.co/ aim to help immigrants learn Swedish</li>
+                  <li>Working on a language platform named Lingio http://lingio.co/ aim to help immigrants learn Swedish</li>
                   <li>Use HTML, Stylus, JavaScript and ReactJS to enhance the design and user experience</li>
                   <li>Collaborate with team members on UI/UX ideas for existing and new products</li>
-                  <li>Version control with Git</li>
+                  <li>Make new admin portal site using VueJS</li>
+                  <li>Set up automation test using Selenium and Cross Browser Testing, hook it into github</li>
+                  <li>Implement microfrontend for main product</li>
                 </ul>
               </div>
-              <!-- end ngRepeat: position in organization.positions -->
             </li>
+            <li>
+              <div class="organization-heading">
+                <a href="https://wearefram.com" title="fram^">
+                  <h2 itemprop="name" class="organization-name">Aleph Lab</h2>
+                </a>
+              </div>
+              <span class="organization-dates">Nov 2017 - Aug 2018 (Work in Bangkok - Thailand)</span>
+              <div>
+                <h3 class="position-title">Senior Frontend Developer</h3>
+                <ul class="tertiary-work-experience-list">
+                  <li>Making app using React Native and webapp using ReactJS for Muang Thai Insuarance company</li>
+                  <li>Plan, architecture the whole app and webapp from scratch</li>
+                  <li>Build skeleton, make based, reusable components for team members to work on</li>
+                  <li>Ensure quality of code base.</li>
+                  <li>In charge of demo new feature for client</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="organization-heading">
+                <a href="https://wearefram.com" title="fram^">
+                  <h2 itemprop="name" class="organization-name">RITVN</h2>
+                </a>
+              </div>
+              <span class="organization-dates">Jan 2016 - Nov 2017</span>
+              <div>
+                <h3 class="position-title">Developer</h3>
+                <ul class="tertiary-work-experience-list">
+                  <li>Building Chrome Extension named HeartBeat for youtuber, using React to build report page and NodeJS for api</li>
+                  <li>Work in internal project name Casewhere, handon every parts of the project, from configuration to Api (using C#) to Worker site (using Angular JS)</li>
+                  <li>Participate in analyse requirement, designing, modeling, to implementation and unit test.</li>
+                  <li>In charge of making a demo to show for customer.</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="organization-heading">
+                <a href="https://wearefram.com" title="fram^">
+                  <h2 itemprop="name" class="organization-name">Sutrix Media</h2>
+                </a>
+              </div>
+              <span class="organization-dates">Apr 2014 - Jan 2016</span>
+              <h3 class="position-title">JavaScript Developer</h3>
+              <ul class="tertiary-work-experience-list">
+                <li>Mostly work on website projects like HolyBikini, Prudential, Singapore Airline</li>
+                <li>Responsible coding functions, animations using JQuery.</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section style="margin-top: 50px" class="experience-section">
+          <h1>Other stuffs</h1>
+          <ul class="work-experience-list">
+            <li>Javascript instructor at <a href="https://nordiccoder.com/khoa-hoc-online/xay-dung-spa-shopping-cart-js-thuan">Nordic Coder (https://nordiccoder.com/khoa-hoc-online/xay-dung-spa-shopping-cart-js-thuan)</a></li>
+            <li>Freelancer at <a href="https://pangara.com/">Pangara</a></li>
+            <li>More fun stuffs at <a href="https://codepen.io/cqpro/">Codepen (https://codepen.io/cqpro)</a></li>
+            <li>And here <a href="https://github.com/chiquyet199">Github (https://github.com/chiquyet199)</a></li>
+            <li>TOEIC scored of 670</li>
           </ul>
         </section>
       </main>
